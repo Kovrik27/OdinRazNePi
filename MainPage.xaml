@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OdinRazNePi.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+            
+            <Label
+                Text="Калькутятор"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+            <Entry x:Name="Display"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+
+                <Button Text="⬅" Margin="5"/>
+                <Button Text="CE" Margin="5"  Grid.Column="1"/>
+                <Button Text="C" Margin="5" Grid.Column="2" Clicked="ClearFull"/>
+                <Button Text="+/-" Margin="5" Grid.Column="3" Clicked="PilusMinus"/>
+                <Button Text="√" Margin="5" Grid.Column="4"/>
+                <Button Text="7" Margin="5" Grid.Row="1" Clicked="ClickCifri"/>
+                <Button Text="4" Margin="5" Grid.Row="2" Clicked="ClickCifri"/>
+                <Button Text="1" Margin="5" Grid.Row="3" Clicked="ClickCifri"/>
+                <Button Text="8" Margin="5" Grid.Row="1" Grid.Column="1" Clicked="ClickCifri"/>
+                <Button Text="9" Margin="5" Grid.Row="1" Grid.Column="2" Clicked="ClickCifri"/>
+                <Button Text="/" Margin="5" Grid.Row="1" Grid.Column="3" Clicked="GoToOperation"/>
+                <Button Text="%" Margin="5" Grid.Row="1" Grid.Column="4" Clicked="Percent"/>
+                <Button Text="5" Margin="5" Grid.Row="2" Grid.Column="1" Clicked="ClickCifri"/>
+                <Button Text="6" Margin="5" Grid.Row="2" Grid.Column="2" Clicked="ClickCifri"/>
+                <Button Text="*" Margin="5" Grid.Row="2" Grid.Column="3" Clicked="GoToOperation"/>
+                <Button Text="1/x" Margin="5" Grid.Row="2" Grid.Column="4"/>
+                <Button Text="2" Margin="5" Grid.Row="3" Grid.Column="1" Clicked="ClickCifri"/>
+                <Button Text="3" Margin="5" Grid.Row="3" Grid.Column="2" Clicked="ClickCifri"/>
+                <Button Text="-" Margin="5" Grid.Row="3" Grid.Column="3" Clicked="GoToOperation"/>
+                <Button Text="0" Margin="5" Grid.Row="4" Grid.ColumnSpan="2" Clicked="ClickCifri"/>
+                <Button Text="," Margin="5" Grid.Row="4" Grid.Column="2" Clicked="Comma"/>
+                <Button Text="+" Margin="5" Grid.Row="4" Grid.Column="3" Clicked="GoToOperation"/>
+                <Button Text="=" Margin="5"  Grid.Row="3" Grid.Column="4" Grid.RowSpan="2" Clicked="Operation"/>
+
+
+            </Grid>
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
