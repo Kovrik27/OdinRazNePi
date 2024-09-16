@@ -12,7 +12,7 @@
         char operation = ' ';
         int count = 0;
 
-        public void History()
+        public void History(char operation)
         {
             if (!IsOperation)
             {
@@ -60,20 +60,28 @@
 			Display.Text = result.ToString();
 
             if (sender != null)
+            {
                 Istoria.Text = null;
+                count = 0;
+            }
             IsOperation = false;
+
+            x = result; 
             
         }
 
         private void GoToOperation(object sender, EventArgs e)
         {
             var button = sender as Button;
-            operation = button.Text.ToString()[0];
+            char operation = button.Text.ToString()[0];
+
+
             if (IsOperation != true)
             {
-                double.TryParse(Display.Text, out x);
+                if (count < 1)
+                    double.TryParse(Display.Text, out x);
                 count++;
-               History();
+               History(operation);
                 if (count > 1) 
                 {
                     Operation(null,null);
@@ -84,8 +92,7 @@
 
             }
             
-
-
+            this.operation = operation;
 
         }
 
@@ -97,10 +104,10 @@
             Display.Text = result.ToString();
         }
 
-        private void Comma(object sender, EventArgs e)
+        private void Dot(object sender, EventArgs e)
         {
-            if (!Display.Text.Contains(","))
-                Display.Text += ",";
+            if (!Display.Text.Contains("."))
+                Display.Text += ".";
         }
 
         private void Percent(object sender, EventArgs e)
@@ -137,6 +144,8 @@
             x = 0;
             Display.Text = null;
             Istoria.Text = null;
+            count = 0;
+           
         }
     }
 }

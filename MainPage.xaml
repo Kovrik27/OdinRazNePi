@@ -54,7 +54,7 @@
                 <Button Text="3" Margin="5" Grid.Row="3" Grid.Column="2" Clicked="ClickCifri"/>
                 <Button Text="-" Margin="5" Grid.Row="3" Grid.Column="3" Clicked="GoToOperation"/>
                 <Button Text="0" Margin="5" Grid.Row="4" Grid.ColumnSpan="2" Clicked="ClickCifri"/>
-                <Button Text="," Margin="5" Grid.Row="4" Grid.Column="2" Clicked="Comma"/>
+                <Button Text="." Margin="5" Grid.Row="4" Grid.Column="2" Clicked="Dot"/>
                 <Button Text="+" Margin="5" Grid.Row="4" Grid.Column="3" Clicked="GoToOperation"/>
                 <Button Text="=" Margin="5"  Grid.Row="3" Grid.Column="4" Grid.RowSpan="2" Clicked="Operation"/>
 
